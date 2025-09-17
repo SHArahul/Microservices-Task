@@ -16,17 +16,29 @@ gateway-service	API Gateway routing requests to backend services	3003
 All services are containerized using Docker and connected via a shared network (microservices-net).
 
 Folder Structure
+
 Microservices-Task/
+
 │── docker-compose.yml
+
 └── microservices/
+
     ├── user-service/
+    
     │   ├── Dockerfile
+    
     │   └── app.js
+    
     ├── product-service/
+    
     │   ├── Dockerfile
+    
     │   └── app.js
+    
     └── gateway-service/
+    
         ├── Dockerfile
+        
         └── app.js
 
 Prerequisites
