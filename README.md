@@ -56,24 +56,31 @@ Each microservice contains a Dockerfile:
 
 Example structure:
 
-# Base image
+Base image
+
 FROM node:18-alpine
 
-# Set working directory
+Set working directory
+
 WORKDIR /app
 
-# Copy package files and install dependencies
+Copy package files and install dependencies
+
 COPY package*.json ./
+
 RUN npm install
 
-# Copy project files
+Copy project files
+
 COPY . .
 
-# Expose service port
+Expose service port
+
 EXPOSE 3000  # Change per service
 
-# Start the application
-CMD ["node", "index.js"]
+Start the application
+
+CMD ["node", "app.js"]
 
 
 Each service exposes its own port (user-service:3000, product-service:3001, gateway-service:3003).
